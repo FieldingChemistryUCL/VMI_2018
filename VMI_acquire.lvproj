@@ -449,7 +449,7 @@
 			<Item Name="VMI_queue_clean_up_arrays.vi" Type="VI" URL="../Queues/VMI_queue_clean_up_arrays.vi"/>
 			<Item Name="VMI_queue_set_up_arrays.vi" Type="VI" URL="../Queues/VMI_queue_set_up_arrays.vi"/>
 			<Item Name="VMI_save_delay_paths.vi" Type="VI" URL="../Acquie_VIs/VMI_save_delay_paths.vi"/>
-			<Item Name="VMI_save_Files.vi" Type="VI" URL="../Save_VIa/VMI_save_Files.vi"/>
+			<Item Name="VMI_save_Files_backup.vi" Type="VI" URL="../Save_VIa/VMI_save_Files_backup.vi"/>
 			<Item Name="VMI_save_IF32_format.vi" Type="VI" URL="../Save_VIa/VMI_save_IF32_format.vi"/>
 			<Item Name="VMI_save_IF32_path.vi" Type="VI" URL="../Save_VIa/VMI_save_IF32_path.vi"/>
 			<Item Name="VMI_set_date_path.vi" Type="VI" URL="../Data_logging/VMI_set_date_path.vi"/>
