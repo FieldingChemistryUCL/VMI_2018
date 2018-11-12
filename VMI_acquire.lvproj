@@ -10,6 +10,7 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Ref_cluster.ctl" Type="VI" URL="../Type defs/Ref_cluster.ctl"/>
 		<Item Name="VMI_Main_Events.vi" Type="VI" URL="../VMI_Main_Events.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
@@ -432,8 +433,6 @@
 			<Item Name="VMI_camera_contrl.ctl" Type="VI" URL="../Type defs/VMI_camera_contrl.ctl"/>
 			<Item Name="VMI_camera_Set.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_camera_Set.vi"/>
 			<Item Name="VMI_clean_up_Camera.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_clean_up_Camera.vi"/>
-			<Item Name="VMI_collect_refs.ctl" Type="VI" URL="../Type defs/VMI_collect_refs.ctl"/>
-			<Item Name="VMI_collection_refs.ctl" Type="VI" URL="../Type defs/VMI_collection_refs.ctl"/>
 			<Item Name="VMI_create_arrays.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_create_arrays.vi"/>
 			<Item Name="VMI_create_image_from_points.vi" Type="VI" URL="../Display VI/VMI_create_image_from_points.vi"/>
 			<Item Name="VMI_data_sort.vi" Type="VI" URL="../Acquie_VIs/VMI_data_sort.vi"/>
