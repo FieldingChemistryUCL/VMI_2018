@@ -331,6 +331,7 @@
 			<Item Name="Build_database_info.vi" Type="VI" URL="../Data_logging/DataBase/Build_database_info.vi"/>
 			<Item Name="Build_Slack_text.vi" Type="VI" URL="../Data_logging/Build_Slack_text.vi"/>
 			<Item Name="C843_Configuration_Setup.vi" Type="VI" URL="../GCS_LabVIEW/C843_Configuration_Setup.vi"/>
+			<Item Name="Chk_cre_dir.vi" Type="VI" URL="../Save_VIa/Chk_cre_dir.vi"/>
 			<Item Name="Close connection if open.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/Close connection if open.vi"/>
 			<Item Name="Commanded axes connected?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Commanded axes connected?.vi"/>
 			<Item Name="Commanded stage name available?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Commanded stage name available?.vi"/>
