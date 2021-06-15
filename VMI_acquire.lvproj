@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="19008000">
+<Project Type="Project" LVVersion="20008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -11,11 +11,14 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DB_set_and_save.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/DB_set_and_save.vi"/>
+		<Item Name="get_cred_path.vi" Type="VI" URL="../Data_logging/get_cred_path.vi"/>
 		<Item Name="read_cred_xml_no_details.vi" Type="VI" URL="../Data_logging/read_cred_xml_no_details.vi"/>
 		<Item Name="Ref_cluster.ctl" Type="VI" URL="../Type defs/Ref_cluster.ctl"/>
 		<Item Name="VMI_Main_Events.vi" Type="VI" URL="../VMI_Main_Events.vi"/>
+		<Item Name="VMI_save_IF32_files.vi" Type="VI" URL="../Save_VIa/VMI_save_IF32_files.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
@@ -238,9 +241,6 @@
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
-				<Item Name="GOOP Object Repository Method.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository Method.ctl"/>
-				<Item Name="GOOP Object Repository Statistics.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository Statistics.ctl"/>
-				<Item Name="GOOP Object Repository.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository.vi"/>
 				<Item Name="GXML.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/GXML/GXML.lvlib"/>
 				<Item Name="Image Type" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Type"/>
 				<Item Name="Image Unit" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Unit"/>
@@ -260,7 +260,7 @@
 				<Item Name="IMAQ Particle Filter 2" Type="VI" URL="/&lt;vilib&gt;/vision/Compatibility.llb/IMAQ Particle Filter 2"/>
 				<Item Name="IMAQ ReadFile" Type="VI" URL="/&lt;vilib&gt;/vision/Files.llb/IMAQ ReadFile"/>
 				<Item Name="IMAQ Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Rectangle"/>
-				<Item Name="IMAQdx.ctl" Type="VI" URL="/&lt;vilib&gt;/userDefined/High Color/IMAQdx.ctl"/>
+				<Item Name="IMAQdx.ctl" Type="VI" URL="/&lt;vilib&gt;/userdefined/High Color/IMAQdx.ctl"/>
 				<Item Name="Insert Queue Element.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Insert Queue Element.vi"/>
 				<Item Name="LabVIEWHTTPClient.lvlib" Type="Library" URL="/&lt;vilib&gt;/httpClient/LabVIEWHTTPClient.lvlib"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
@@ -268,7 +268,6 @@
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
-				<Item Name="NI_Database_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/database/NI_Database_API.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_Vision_Acquisition_Software.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/driver/NI_Vision_Acquisition_Software.lvlib"/>
@@ -361,7 +360,6 @@
 			<Item Name="Define connected systems (Array).vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/Define connected systems (Array).vi"/>
 			<Item Name="DFH.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/DFH.vi"/>
 			<Item Name="ERR?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/ERR?.vi"/>
-			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Ctrl/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Type defs/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FRF.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/FRF.vi"/>
 			<Item Name="GCSTranslateError.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/GCSTranslateError.vi"/>
@@ -432,7 +430,6 @@
 			<Item Name="RON.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/RON.vi"/>
 			<Item Name="RON?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/RON?.vi"/>
 			<Item Name="SAI?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/SAI?.vi"/>
-			<Item Name="Save_local_database.vi" Type="VI" URL="../Data_logging/DataBase/Save_local_database.vi"/>
 			<Item Name="Scan_ctrl.ctl" Type="VI" URL="../Type defs/Scan_ctrl.ctl"/>
 			<Item Name="Scan_ctrl.vi" Type="VI" URL="../Data_logging/Scan_ctrl.vi"/>
 			<Item Name="Scans_move_1_delay.vi" Type="VI" URL="../PI_delay/Scans_move_1_delay.vi"/>
@@ -463,7 +460,7 @@
 			<Item Name="VMI_camera_Set.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_camera_Set.vi"/>
 			<Item Name="VMI_clean_up_Camera.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_clean_up_Camera.vi"/>
 			<Item Name="VMI_create_arrays.vi" Type="VI" URL="../VMI_set_up_VIs/VMI_create_arrays.vi"/>
-			<Item Name="VMI_create_image_from_points.vi" Type="VI" URL="../Display VI/VMI_create_image_from_points.vi"/>
+			<Item Name="VMI_create_image_from_points_new.vi" Type="VI" URL="../Display VI/VMI_create_image_from_points_new.vi"/>
 			<Item Name="VMI_data_sort.vi" Type="VI" URL="../Acquie_VIs/VMI_data_sort.vi"/>
 			<Item Name="VMI_delays_combine.vi" Type="VI" URL="../Acquie_VIs/VMI_delays_combine.vi"/>
 			<Item Name="VMI_delays_save_display.vi" Type="VI" URL="../Acquie_VIs/VMI_delays_save_display.vi"/>
