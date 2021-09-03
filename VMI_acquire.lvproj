@@ -12,15 +12,19 @@
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="DB_set_and_save.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/DB_set_and_save.vi"/>
 		<Item Name="read_cred_xml_no_details.vi" Type="VI" URL="../Data_logging/read_cred_xml_no_details.vi"/>
+		<Item Name="read_settings.vi" Type="VI" URL="../Data_logging/settings/read_settings.vi"/>
 		<Item Name="Ref_cluster.ctl" Type="VI" URL="../Type defs/Ref_cluster.ctl"/>
 		<Item Name="VMI_Main_Events.vi" Type="VI" URL="../VMI_Main_Events.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
+				<Item Name="Application Directory.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Application Directory.vi"/>
 				<Item Name="BuildHelpPath.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/BuildHelpPath.vi"/>
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
 				<Item Name="Check Special Tags.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Check Special Tags.vi"/>
 				<Item Name="Clear Errors.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Clear Errors.vi"/>
+				<Item Name="Close File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Close File+.vi"/>
 				<Item Name="Color to RGB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/colorconv.llb/Color to RGB.vi"/>
+				<Item Name="compatReadText.vi" Type="VI" URL="/&lt;vilib&gt;/_oldvers/_oldvers.llb/compatReadText.vi"/>
 				<Item Name="Convert property node font to graphics font.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Convert property node font to graphics font.vi"/>
 				<Item Name="Create Queue.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Create Queue.vi"/>
 				<Item Name="DAQmx Clear Task.vi" Type="VI" URL="/&lt;vilib&gt;/DAQmx/configure/task.llb/DAQmx Clear Task.vi"/>
@@ -230,6 +234,7 @@
 				<Item Name="ErrWarn.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/ErrWarn.ctl"/>
 				<Item Name="eventvkey.ctl" Type="VI" URL="/&lt;vilib&gt;/event_ctls.llb/eventvkey.ctl"/>
 				<Item Name="ex_CorrectErrorChain.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ex_CorrectErrorChain.vi"/>
+				<Item Name="Find First Error.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find First Error.vi"/>
 				<Item Name="Find Tag.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Find Tag.vi"/>
 				<Item Name="Format Message String.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Format Message String.vi"/>
 				<Item Name="General Error Handler Core CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/General Error Handler Core CORE.vi"/>
@@ -238,9 +243,6 @@
 				<Item Name="Get Text Rect.vi" Type="VI" URL="/&lt;vilib&gt;/picture/picture.llb/Get Text Rect.vi"/>
 				<Item Name="GetHelpDir.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetHelpDir.vi"/>
 				<Item Name="GetRTHostConnectedProp.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/GetRTHostConnectedProp.vi"/>
-				<Item Name="GOOP Object Repository Method.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository Method.ctl"/>
-				<Item Name="GOOP Object Repository Statistics.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository Statistics.ctl"/>
-				<Item Name="GOOP Object Repository.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/_goopsup.llb/GOOP Object Repository.vi"/>
 				<Item Name="GXML.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI/GXML/GXML.lvlib"/>
 				<Item Name="Image Type" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Type"/>
 				<Item Name="Image Unit" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Image Unit"/>
@@ -262,18 +264,19 @@
 				<Item Name="IMAQ Rectangle" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/IMAQ Rectangle"/>
 				<Item Name="IMAQdx.ctl" Type="VI" URL="/&lt;vilib&gt;/userDefined/High Color/IMAQdx.ctl"/>
 				<Item Name="Insert Queue Element.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Insert Queue Element.vi"/>
+				<Item Name="Is Path and Not Empty.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Is Path and Not Empty.vi"/>
 				<Item Name="LabVIEWHTTPClient.lvlib" Type="Library" URL="/&lt;vilib&gt;/httpClient/LabVIEWHTTPClient.lvlib"/>
 				<Item Name="Longest Line Length in Pixels.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Longest Line Length in Pixels.vi"/>
 				<Item Name="LVBoundsTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVBoundsTypeDef.ctl"/>
 				<Item Name="LVNumericRepresentation.ctl" Type="VI" URL="/&lt;vilib&gt;/numeric/LVNumericRepresentation.ctl"/>
 				<Item Name="LVRectTypeDef.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/miscctls.llb/LVRectTypeDef.ctl"/>
 				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
-				<Item Name="NI_Database_API.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/database/NI_Database_API.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_Vision_Acquisition_Software.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/driver/NI_Vision_Acquisition_Software.lvlib"/>
 				<Item Name="NI_Vision_Development_Module.lvlib" Type="Library" URL="/&lt;vilib&gt;/vision/NI_Vision_Development_Module.lvlib"/>
 				<Item Name="Not Found Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Not Found Dialog.vi"/>
+				<Item Name="Open File+.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Open File+.vi"/>
 				<Item Name="Overlay Results (Blob).vi" Type="VI" URL="/&lt;vilib&gt;/vision/Blob.llb/Overlay Results (Blob).vi"/>
 				<Item Name="Particle Parameters" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/Particle Parameters"/>
 				<Item Name="Path To Command Line String.vi" Type="VI" URL="/&lt;vilib&gt;/AdvancedString/Path To Command Line String.vi"/>
@@ -281,6 +284,12 @@
 				<Item Name="Queue RefNum" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Queue RefNum"/>
 				<Item Name="Queue SRdB command.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Queue SRdB command.ctl"/>
 				<Item Name="Queue SRdB.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Queue SRdB.vi"/>
+				<Item Name="Read Delimited Spreadsheet (DBL).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (DBL).vi"/>
+				<Item Name="Read Delimited Spreadsheet (I64).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (I64).vi"/>
+				<Item Name="Read Delimited Spreadsheet (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet (string).vi"/>
+				<Item Name="Read Delimited Spreadsheet.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Delimited Spreadsheet.vi"/>
+				<Item Name="Read File+ (string).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read File+ (string).vi"/>
+				<Item Name="Read Lines From File (with error IO).vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Read Lines From File (with error IO).vi"/>
 				<Item Name="Remove Queue Element.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/queue.llb/Remove Queue Element.vi"/>
 				<Item Name="ROI Descriptor" Type="VI" URL="/&lt;vilib&gt;/vision/Image Controls.llb/ROI Descriptor"/>
 				<Item Name="Search and Replace Pattern.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Search and Replace Pattern.vi"/>
@@ -289,7 +298,9 @@
 				<Item Name="Simple Error Handler.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Simple Error Handler.vi"/>
 				<Item Name="Space Constant.vi" Type="VI" URL="/&lt;vilib&gt;/dlg_ctls.llb/Space Constant.vi"/>
 				<Item Name="subBuildXYGraph.vi" Type="VI" URL="/&lt;vilib&gt;/express/express controls/BuildXYGraphBlock.llb/subBuildXYGraph.vi"/>
+				<Item Name="subDisplayMessage.vi" Type="VI" URL="/&lt;vilib&gt;/express/express output/DisplayMessageBlock.llb/subDisplayMessage.vi"/>
 				<Item Name="subFile Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/FileDialogBlock.llb/subFile Dialog.vi"/>
+				<Item Name="subTimeDelay.vi" Type="VI" URL="/&lt;vilib&gt;/express/express execution control/TimeDelayBlock.llb/subTimeDelay.vi"/>
 				<Item Name="TagReturnType.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/TagReturnType.ctl"/>
 				<Item Name="Three Button Dialog CORE.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog CORE.vi"/>
 				<Item Name="Three Button Dialog.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Three Button Dialog.vi"/>
@@ -355,13 +366,20 @@
 			<Item Name="DAQ_shutter_write.vi" Type="VI" URL="../DAQ_VI/DAQ_shutter_write.vi"/>
 			<Item Name="data_cred.ctl" Type="VI" URL="../Type defs/data_cred.ctl"/>
 			<Item Name="Database_control.ctl" Type="VI" URL="../Type defs/Database_control.ctl"/>
+			<Item Name="DB Tools Close Connection.vi" Type="VI" URL="../Data_logging/DataBase/&lt;vilib&gt;/addons/database/Connection.llb/DB Tools Close Connection.vi"/>
+			<Item Name="DB Tools Insert Data.vi" Type="VI" URL="../Data_logging/DataBase/&lt;vilib&gt;/addons/database/Auxilliary.llb/DB Tools Insert Data.vi"/>
+			<Item Name="DB Tools Open Connec (Path).vi" Type="VI" URL="../Data_logging/DataBase/&lt;vilib&gt;/addons/database/Connection.llb/DB Tools Open Connec (Path).vi"/>
+			<Item Name="DB Tools Open Connection.vi" Type="VI" URL="../Data_logging/DataBase/&lt;vilib&gt;/addons/database/Connection.llb/DB Tools Open Connection.vi"/>
 			<Item Name="Define axes to command from boolean array.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Define axes to command from boolean array.vi"/>
 			<Item Name="Define connected axes.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/Define connected axes.vi"/>
 			<Item Name="Define connected stages with dialog.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Define connected stages with dialog.vi"/>
 			<Item Name="Define connected systems (Array).vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/Define connected systems (Array).vi"/>
+			<Item Name="del_fs_to_del_mm.vi" Type="VI" URL="../PI_delay/Delay_Scans/del_fs_to_del_mm.vi"/>
+			<Item Name="delay_read_points.vi" Type="VI" URL="../PI_delay/Delay_Scans/delay_read_points.vi"/>
+			<Item Name="delay_save_points.vi" Type="VI" URL="../PI_delay/Delay_Scans/delay_save_points.vi"/>
+			<Item Name="delays_insert.vi" Type="VI" URL="../PI_delay/Delay_Scans/delays_insert.vi"/>
 			<Item Name="DFH.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/DFH.vi"/>
 			<Item Name="ERR?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/ERR?.vi"/>
-			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Ctrl/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Type defs/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FRF.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/FRF.vi"/>
 			<Item Name="GCSTranslateError.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/GCSTranslateError.vi"/>
@@ -371,6 +389,7 @@
 			<Item Name="Get all axes.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Get all axes.vi"/>
 			<Item Name="Get arrays without blanks.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Get arrays without blanks.vi"/>
 			<Item Name="Get lines from string.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Get lines from string.vi"/>
+			<Item Name="get_credy_path.vi" Type="VI" URL="../Data_logging/get_credy_path.vi"/>
 			<Item Name="Global Analog.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Analog control.llb/Global Analog.vi"/>
 			<Item Name="Global DaisyChain.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/Global DaisyChain.vi"/>
 			<Item Name="Global1.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/Global1.vi"/>
@@ -384,6 +403,7 @@
 			<Item Name="Initialize Global2.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/Initialize Global2.vi"/>
 			<Item Name="IO_settings_ctrl.ctl" Type="VI" URL="../Type defs/IO_settings_ctrl.ctl"/>
 			<Item Name="Is DaisyChain open.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/Is DaisyChain open.vi"/>
+			<Item Name="laser_ctrl.ctl" Type="VI" URL="../Type defs/laser_ctrl.ctl"/>
 			<Item Name="LIM?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/LIM?.vi"/>
 			<Item Name="LJ_write_DB.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/LJ_write_DB.vi"/>
 			<Item Name="Longlasting one-axis command.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Longlasting one-axis command.vi"/>
@@ -418,6 +438,8 @@
 			</Item>
 			<Item Name="ok_packet_metadata.ctl" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/typedefs/ok_packet_metadata.ctl"/>
 			<Item Name="ONT?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/ONT?.vi"/>
+			<Item Name="OPO_read_points.vi" Type="VI" URL="../opo/OPO_read_points.vi"/>
+			<Item Name="OPO_save_points.vi" Type="VI" URL="../opo/OPO_save_points.vi"/>
 			<Item Name="PI Open Interface of one system.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/PI Open Interface of one system.vi"/>
 			<Item Name="PI Receive String.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/PI Receive String.vi"/>
 			<Item Name="PI Send String.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/PI Send String.vi"/>
@@ -433,12 +455,17 @@
 			<Item Name="RON?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/RON?.vi"/>
 			<Item Name="SAI?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/SAI?.vi"/>
 			<Item Name="Save_local_database.vi" Type="VI" URL="../Data_logging/DataBase/Save_local_database.vi"/>
+			<Item Name="save_settings.vi" Type="VI" URL="../Data_logging/settings/save_settings.vi"/>
 			<Item Name="Scan_ctrl.ctl" Type="VI" URL="../Type defs/Scan_ctrl.ctl"/>
 			<Item Name="Scan_ctrl.vi" Type="VI" URL="../Data_logging/Scan_ctrl.vi"/>
+			<Item Name="Scan_Set_up.vi" Type="VI" URL="../PI_delay/Delay_Scans/Scan_Set_up.vi"/>
+			<Item Name="Scan_Set_up_OPO.vi" Type="VI" URL="../opo/Scan_Set_up_OPO.vi"/>
 			<Item Name="Scans_move_1_delay.vi" Type="VI" URL="../PI_delay/Scans_move_1_delay.vi"/>
 			<Item Name="Select values for chosen axes.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Select values for chosen axes.vi"/>
 			<Item Name="server_init_data.ctl" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/typedefs/server_init_data.ctl"/>
 			<Item Name="Set RON and return RON status.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Set RON and return RON status.vi"/>
+			<Item Name="Set wavelength.vi" Type="VI" URL="../../../Action spectra/Set wavelength.vi"/>
+			<Item Name="settings_file_ctrl.ctl" Type="VI" URL="../Type defs/settings_file_ctrl.ctl"/>
 			<Item Name="SHA-1 Core.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/subVIs/SHA-1/SHA-1 Core.vi"/>
 			<Item Name="SHA-1 Digest.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/subVIs/SHA-1/SHA-1 Digest.vi"/>
 			<Item Name="SHA-1 Pad.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/subVIs/SHA-1/SHA-1 Pad.vi"/>
