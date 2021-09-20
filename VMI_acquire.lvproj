@@ -380,6 +380,7 @@
 			<Item Name="delays_insert.vi" Type="VI" URL="../PI_delay/Delay_Scans/delays_insert.vi"/>
 			<Item Name="DFH.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/DFH.vi"/>
 			<Item Name="ERR?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/ERR?.vi"/>
+			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Ctrl/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FileAcq_v1_Ctrl.ctl" Type="VI" URL="../Type defs/FileAcq_v1_Ctrl.ctl"/>
 			<Item Name="FRF.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Limits.llb/FRF.vi"/>
 			<Item Name="GCSTranslateError.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/GCSTranslateError.vi"/>
