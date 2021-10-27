@@ -10,10 +10,12 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
+		<Item Name="Create_empty_array.vi" Type="VI" URL="../Array_subVIs/Create_empty_array.vi"/>
 		<Item Name="DB_set_and_save.vi" Type="VI" URL="../Data_logging/DataBase/MYsql/DB_set_and_save.vi"/>
 		<Item Name="read_cred_xml_no_details.vi" Type="VI" URL="../Data_logging/read_cred_xml_no_details.vi"/>
 		<Item Name="read_settings.vi" Type="VI" URL="../Data_logging/settings/read_settings.vi"/>
 		<Item Name="Ref_cluster.ctl" Type="VI" URL="../Type defs/Ref_cluster.ctl"/>
+		<Item Name="Save_scan_results.ctl" Type="VI" URL="../Type defs/Save_scan_results.ctl"/>
 		<Item Name="VMI_Main_Events.vi" Type="VI" URL="../VMI_Main_Events.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
