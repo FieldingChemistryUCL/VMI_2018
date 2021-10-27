@@ -439,6 +439,7 @@
 			</Item>
 			<Item Name="ok_packet_metadata.ctl" Type="VI" URL="../Data_logging/DataBase/MYsql/lv_mysql_connector_v1_lv8/typedefs/ok_packet_metadata.ctl"/>
 			<Item Name="ONT?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/General command.llb/ONT?.vi"/>
+			<Item Name="OPO_q_switch.vi" Type="VI" URL="../opo/OPO_q_switch.vi"/>
 			<Item Name="OPO_read_points.vi" Type="VI" URL="../opo/OPO_read_points.vi"/>
 			<Item Name="OPO_save_points.vi" Type="VI" URL="../opo/OPO_save_points.vi"/>
 			<Item Name="PI Open Interface of one system.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Communication.llb/PI Open Interface of one system.vi"/>
@@ -513,6 +514,7 @@
 			<Item Name="VMI_set_delay_list.vi" Type="VI" URL="../PI_delay/VMI_set_delay_list.vi"/>
 			<Item Name="VMI_set_delay_times.vi" Type="VI" URL="../Acquie_VIs/VMI_set_delay_times.vi"/>
 			<Item Name="VMI_set_file_date.vi" Type="VI" URL="../Data_logging/VMI_set_file_date.vi"/>
+			<Item Name="VMI_set_wave_list.vi" Type="VI" URL="../opo/VMI_set_wave_list.vi"/>
 			<Item Name="VST?.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Special command.llb/VST?.vi"/>
 			<Item Name="Wait for answer of longlasting command.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Wait for answer of longlasting command.vi"/>
 			<Item Name="Wait for axes to stop.vi" Type="VI" URL="../GCS_LabVIEW/Low Level/Support.llb/Wait for axes to stop.vi"/>
